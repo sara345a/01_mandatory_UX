@@ -6,5 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./script.js" defer></script>
+        <link rel="stylesheet" href="./style.css" />
+        <title>JS Music CDs</title>
+      </head>
+
+      <body>
+        <header>
+          <h1>Music CDs</h1>
+        </header>
+        <main>
+          <section id="information-form_section">
+            <form id="cd_information_form">
+              <div id="author_container">
+                <label for="author">
+                  <span>Author</span>
+                </label>
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  placeholder="Enter the author here"
+                  required
+                />
+              </div>
+              <div id="title_container">
+                <label for="title">
+                  <span>Title</span>
+                </label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Enter the title here"
+                  required
+                />
+              </div>
+              <div id="year_container">
+                <label for="year">
+                  <span>Year</span>
+                </label>
+                <input
+                  type="number"
+                  name="year"
+                  id="year"
+                  placeholder="Select the year here"
+                  min="0"
+                  maxlength="4"
+                  value="2022"
+                  required
+                />
+              </div>
+              <input type="submit" value="Add" id="submit_button" />
+            </form>
+          </section>
+
+          <section class="table">
+            <table id="cd_information_table">
+              <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th></th>
+              </tr>
+            </table>
+          </section>
+
+          <template id="cd_information_template">
+            <tr>
+              <td class="author"></td>
+              <td class="title"></td>
+              <td class="year"></td>
+              <td class="delete">🗑️</td>
+            </tr>
+          </template>
+        </main>
+      </body>
+    </html>
+  </body>
 </html>
