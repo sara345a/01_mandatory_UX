@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact - Page</title>
+  </head>
+  <header>
+    <h1>Restaurant KEA</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <body id="contact">
+    <main>
+      <section>
+        <img src="images/map.jpg" alt="Map" />
+        <address>
+          Guldbergsgade 29<br />
+          2200 Copenhagen<br />
+          <br />
+          Phone no.: <a href="tel:20825370">20 82 53 70</a><br />
+          <br />
+          E-mail:
+          <a href="mailto:info@restaurantkea.dk">info@restaurantkea.dk</a>
+        </address>
+      </section>
+
+      <section>
+        <form action="mailto:info@restaurantkea.dk" method="POST">
+          <fieldset>
+            <legend>Contact form</legend>
+            <div class="user_info">
+              <label for="txtFullName">Full name</label>
+              <input
+                type="text"
+                id="txtFullName"
+                name="txtFullName"
+                required
+                pattern="([A-Za-z-]+ )+[A-Za-z-]+"
+              />
+            </div>
+            <div class="user_info">
+              <label for="txtPhoneNo">Phone no.</label>
+              <input
+                type="text"
+                id="txtPhoneNo"
+                name="txtPhoneNo"
+                required
+                pattern="[0-9]{8}"
+              />
+            </div>
+            <div class="user_info">
+              <label for="txtEmail">E-mail</label>
+              <input type="email" id="txtEmail" name="txtEmail" required />
+            </div>
+            <div>
+              <label for="txtPersons">Persons</label>
+              <input
+                type="number"
+                id="txtPersons"
+                name="txtPersons"
+                value="2"
+                required
+                min="1"
+                max="20"
+              />
+            </div>
+            <div>
+              <label for="txtDateTime">Date and time</label>
+              <input
+                type="datetime-local"
+                id="txtDateTime"
+                name="txtDateTime"
+                required
+              />
+            </div>
+            <div>
+              <label for="txtInformation">Further information</label><br />
+              <textarea id="txtInformation" name="txtInformation"></textarea>
+            </div>
+            <input type="submit" value="Send" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

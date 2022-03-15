@@ -1,7 +1,7 @@
 "use strict";
 
 // function deletes typed info from table
-function deleteTypedInfoFromTable(event) {
+function deleteAddedRow(event) {
   document
     .querySelector("#cd_information_table")
     .removeChild(event.target.parentElement);
@@ -18,7 +18,7 @@ function addTypedInfoToTable(CDInfo) {
   clone.querySelector(".title").textContent = CDInfo.title;
   clone.querySelector(".year").textContent = CDInfo.year;
   clone.querySelector(".delete").addEventListener("click", (event) => {
-    deleteTypedInfoFromTable(event);
+    deleteAddedRow(event);
   });
 
   // appends template to the table

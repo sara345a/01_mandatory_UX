@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-style: sans-serif;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 5px 15px;
+}
+
+h1 {
+  background: #f56161;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  background: #023452;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+
+a:nth-child(3) {
+  border-bottom: unset;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 102px;
+  border-bottom: solid 0.5px white;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+}
+
+a:hover,
+a:focus {
+  color: rgb(206, 187, 140);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 10px;
+  list-style: none;
+}
+
+li {
+  font-weight: bold;
+  color: #f56161;
+  line-height: 25px;
+}
+
+blockquote {
+  background: #c8c8c8;
+  padding: 5px;
+}
+/*------------------MENU----------------------*/
+article {
+  background: #f4f4b9;
+  padding: 10px;
+  border: solid 1px black;
+  margin-top: 5px;
+}
+
+.price {
+  background: #f56161;
+  display: inline-block;
+  padding: 1px 5px;
+  color: white;
+  border: solid 5px #023452;
+}
+
+/*------------------CONTACT----------------------*/
+#contact img {
+  width: 100%;
+  border: solid 1px black;
+  padding: 10px;
+}
+
+address a {
+  color: black;
+  text-decoration: none;
+  padding: unset;
+  border-bottom: solid 0.5px white;
+  display: inline-block;
+  font-weight: bold;
+}
+
+address {
+  margin: 15px 0px;
+  font-style: initial;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input#number_of_participants {
+  max-width: 20%;
+}
+
+button {
+  display: inline-block;
+}
+
+fieldset div {
+  margin-top: 5px;
+}
+
+.user_info input {
+  width: 100%;
+}
+
+textarea#txtInformation {
+  width: 100%;
+  min-height: 100px;
+}
+
+#contact label {
+  width: 100%;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  padding: 3px 6px;
+  margin: 10px;
+}
+
+/*----------------------------------------*/
+/*-------------MEDIA QUERY----------------*/
+/*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+  nav {
+    font-size: 15px;
+    text-align: start;
+    width: 100%;
+  }
+
+  nav a {
+    width: unset;
+    border: unset;
+    padding: 6px 12px 6px 0px;
+    font-size: 20px;
+  }
+}

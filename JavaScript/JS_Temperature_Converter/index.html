@@ -4,7 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Temperature converter</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <h1>Temperature converter</h1>
+    </header>
+    <main>
+      <p id="error_container" class="hide"><span></span></p>
+      <form id="temperature_converter_form">
+        <section>
+          <label for="value">
+            Convert
+            <input
+              id="value"
+              name="value"
+              type="number"
+              value="0"
+              step="0.01"
+            />
+          </label>
+        </section>
+
+        <section id="temperature_form">
+          <div class="input_container">
+            <label for="from_temperature">
+              From
+              <select name="from_temperature" id="from_temperature" size="3">
+                <option value="celsius" selected>Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="input_container">
+            <label for="to_temperature">
+              To
+              <select name="to_temperature" id="to_temperature" size="3">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit" selected>Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <div class="input_container">
+          <input type="submit" value="Calculate!" id="submit_button" />
+        </div>
+      </form>
+      <section id="result" class="hide">
+        <p>
+          <span id="from_value_span"></span> = <span id="to_value_span"></span>
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
