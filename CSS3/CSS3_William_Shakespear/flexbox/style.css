@@ -1,0 +1,121 @@
+:root {
+  --darkpurple: #882d61;
+  --purple: #b95a90;
+  --lightpurple: #e290be;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  padding: 5px 15px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h1 {
+  background-color: var(--darkpurple);
+  color: var(--white);
+  padding: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--lightpurple);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--darkpurple);
+  background-color: var(--lightpurple);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  border-bottom: solid var(--darkpurple) 1px;
+  padding: 5px;
+}
+
+nav a:hover {
+  opacity: 70%;
+}
+
+#text {
+  padding: 20px;
+}
+
+.paragraphs {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+blockquote main {
+  background-color: var(--lightpurple);
+  padding: 10px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+/*----------------------------------------*/
+/*-------------MEDIA QUERY----------------*/
+/*----------------------------------------*/
+
+@media screen and (min-width: 425px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  nav a {
+    width: 50%;
+  }
+
+  nav :nth-child(2n + 1) {
+    border-right: solid 0.5px var(--darkpurple);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  nav a {
+    width: unset;
+    border: none;
+  }
+
+  nav :nth-child(2n + 1) {
+    border-right: unset;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  blockquote main {
+    padding: 20px;
+    margin: 0 0 30px 30px;
+  }
+}
